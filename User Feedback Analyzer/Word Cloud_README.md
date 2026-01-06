@@ -1,6 +1,6 @@
-# 📊 EdTech Feedback Analyzer (English, Bangla & Banglish)
+# 📊 User Feedback Analyzer (English, Bangla & Banglish)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ziaulkarim245/Projects/blob/main/WordCloud.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ziaulkarim245/Projects/blob/main/User Feedback Analyzer/WordCloud.ipynb)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Library](https://img.shields.io/badge/BNLP--Toolkit-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
@@ -45,7 +45,8 @@ To ensure production-grade visualizations, I implemented a three-step fix:
 ## ⚙️ Quick Start
 1.  Click the **"Open in Colab"** badge above.
 2.  Upload your `reviews.xlsx` file.
-3.  Run all cells to generate the images.
+3.  Upload bangla font `kalpurush.ttf` file.
+4.  Run all cells to generate the images.
 
 ---
 
