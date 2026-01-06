@@ -1,6 +1,6 @@
 # 📊 EdTech Feedback Analyzer (English, Bangla & Banglish)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/WordCloud.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ziaulkarim245/Projects/blob/main/WordCloud.ipynb)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Library](https://img.shields.io/badge/BNLP--Toolkit-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
@@ -39,6 +39,13 @@ To ensure production-grade visualizations, I implemented a three-step fix:
 * **Data Processing:** Pandas (ETL)
 * **NLP:** BNLP Toolkit (Bengali Natural Language Processing)
 * **Visualization:** WordCloud, Matplotlib
+
+---
+
+## ⚙️ Quick Start
+1.  Click the **"Open in Colab"** badge above.
+2.  Upload your `reviews.xlsx` file.
+3.  Run all cells to generate the images.
 
 ---
 
