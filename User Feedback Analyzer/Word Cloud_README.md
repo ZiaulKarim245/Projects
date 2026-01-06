@@ -1,21 +1,52 @@
-# 📊 EdTech User Feedback Analyzer (Bangla & English)
+# 📊 EdTech Feedback Analyzer (English, Bangla & Banglish)
 
-This tool helps analyze user reviews for EdTech companies in Bangladesh. It handles mixed languages (Bangla + English) and generates professional Word Clouds to visualize customer sentiment.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO_NAME/blob/main/WordCloud.ipynb)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Library](https://img.shields.io/badge/BNLP-Toolkit-green)
+
+A specialized Natural Language Processing (NLP) tool designed to analyze customer feedback for EdTech platforms in Bangladesh. It processes mixed-language datasets (English, Bengali, and phonetic "Banglish") to generate high-resolution semantic Word Clouds, providing stakeholders with immediate visual insights into user sentiment.
+
+---
+
+## 🧐 The Challenge: Rendering Complex Bengali Script
+One of the core engineering challenges in this project was handling **Complex Text Layout (CTL)** for the Bengali language.
+
+### 🔴 The Problem
+Standard Python libraries (`matplotlib`, `wordcloud`) often fail to render Bengali "Juktakkhor" (conjuncts) correctly on Windows environments.
+* **Issue 1:** Letters appear broken or separated (e.g., `ক্ষ` rendering as `ক` + `ষ`).
+* **Issue 2:** "Tofu" artifacts (square boxes `□□□`) appear due to missing font glyphs.
+* **Root Cause:** The standard Windows Python environment lacks the `libraqm` library, which is essential for shaping complex scripts.
+
+### 🟢 The Solution
+To ensure production-grade visualizations, I engineered a Linux-based pipeline on **Google Colab**:
+1.  **Environment:** Migrated to a Linux environment to leverage `libraqm`, `HarfBuzz`, and `FriBiDi` text shaping engines.
+2.  **Tokenization:** Replaced standard whitespace splitting with **`bnlp_toolkit`**, a dedicated tokenizer for Bengali, ensuring grammatical accuracy.
+3.  **Font Engineering:** Integrated the **Kalpurush** TrueType font to force correct Unicode rendering.
+
+---
 
 ## 🚀 Key Features
-* **Bangla Support:** Correctly renders Bengali characters (e.g., যুক্তাক্ষর) using `bnlp` and custom fonts.
-* **Smart Cleaning:** Removes "junk" words in both English and Bangla to show only meaningful insights.
-* **Professional Output:** Generates high-quality images suitable for reports.
+* **Multi-Language Support:** Seamlessly handles English, native Bangla, and Banglish in the same dataset.
+* **Smart Stopword Filtering:** Uses a hybrid filter removing common English (e.g., "the", "is") and Bangla (e.g., "এবং", "করা") noise words.
+* **Production-Ready Output:** Exports images at **300 DPI** (Print Quality), suitable for professional business reports.
+* **Automated Data Pipeline:** Auto-cleans `NaN` values and normalizes text types during ingestion.
 
-## 🛠️ How to Use
-1. **Open in Colab:** This project is best run in Google Colab.
-2. **Upload Data:** You need an Excel file named `reviews.xlsx` with `Company` and `Review` columns.
-3. **Run:** The script will automatically download the necessary fonts and generate the images.
+---
 
-## 📂 Project Files
-* `WordCloud.ipynb`: The main Python script.
-* `reviews.xlsx`: Your data file (upload this yourself).
-* `kalpurush.ttf`: The Bengali font (downloaded automatically by the script).
+## 🛠️ Tech Stack
+* **Core:** Python 3.10+
+* **Data Processing:** Pandas (ETL), NumPy
+* **NLP:** BNLP Toolkit (Bengali Natural Language Processing)
+* **Visualization:** WordCloud, Matplotlib (with Libraqm backend)
+
+---
+
+## 📂 Project Structure
+```text
+├── WordCloud.ipynb      # Core analysis script (Optimized for Colab)
+├── reviews.xlsx         # Dataset (Requires 'Company' and 'Review' columns)
+├── kalpurush.ttf        # Essential font for Bengali rendering
+└── Cloud_Sample.png     # Sample output for documentation
 
 ## 📊 Sample Output
 ![Sample Word Cloud](Cloud_Sample.png)
