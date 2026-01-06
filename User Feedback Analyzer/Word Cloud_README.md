@@ -23,6 +23,21 @@ To ensure production-grade visualizations, I engineered a Linux-based pipeline o
 2.  **Tokenization:** Replaced standard whitespace splitting with **`bnlp_toolkit`**, a dedicated tokenizer for Bengali, ensuring grammatical accuracy.
 3.  **Font Engineering:** Integrated the **Kalpurush** TrueType font to force correct Unicode rendering.
 
+## 🧐 The Challenge: Rendering Complex Bengali Script
+One of the core engineering challenges in this project was handling **Complex Text Layout (CTL)** for the Bengali language.
+
+### 🔴 The Problem
+Standard Python libraries (`matplotlib`, `wordcloud`) often fail to render Bengali "Juktakkhor" (conjuncts) correctly on Windows environments.
+* **Issue 1:** Letters appear broken or separated (e.g., `ক্ষ` rendering as `ক` + `ষ`).
+* **Issue 2:** "Tofu" artifacts (square boxes `□□□`) appear due to missing font glyphs.
+* **Root Cause:** The default text engine on Windows does not support complex Bengali shaping out of the box.
+
+### 🟢 The Solution
+To ensure production-grade visualizations, I implemented a three-step fix:
+1.  **Environment Strategy:** Migrated the rendering pipeline to **Google Colab (Linux)**. Unlike Windows, the Linux environment correctly handles complex character shaping for Bengali script without requiring manual system patches.
+2.  **Advanced Tokenization:** Instead of simple whitespace splitting (which breaks Bengali grammar), I implemented **`bnlp_toolkit`**. This library accurately tokenizes Bengali text, ensuring words are separated logically before visualization.
+3.  **Font Engineering:** Integrated the **Kalpurush** TrueType font to force correct Unicode rendering, replacing the incompatible default system fonts.
+
 ---
 
 ## 🚀 Key Features
