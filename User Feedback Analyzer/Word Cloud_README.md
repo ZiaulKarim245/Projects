@@ -24,7 +24,6 @@ To ensure production-grade visualizations, I implemented a three-step fix:
 2.  **Advanced Tokenization:** Instead of simple whitespace splitting (which breaks Bengali grammar), I implemented **`bnlp_toolkit`**. This library accurately tokenizes Bengali text, ensuring words are separated logically before visualization.
 3.  **Font Engineering:** Integrated the **Kalpurush** TrueType font to force correct Unicode rendering, replacing incompatible system fonts.
 
----
 
 ## 🚀 Key Features
 * **Multi-Language Support:** Seamlessly handles English, native Bangla, and Banglish in the same dataset.
@@ -32,7 +31,11 @@ To ensure production-grade visualizations, I implemented a three-step fix:
 * **Production-Ready Output:** Exports images at **300 DPI** (Print Quality), suitable for professional business reports.
 * **Automated Data Pipeline:** Auto-cleans `NaN` values, normalizes text types during ingestion, and handles missing file errors gracefully.
 
----
+## 🛠️ Tech Stack
+* **Core:** Python 3.10+
+* **Data Processing:** Pandas (ETL)
+* **NLP:** BNLP Toolkit (Bengali Natural Language Processing)
+* **Visualization:** WordCloud, Matplotlib
 
 ## ⚙️ Quick Start
 
@@ -56,12 +59,6 @@ pip install pandas matplotlib wordcloud bnlp_toolkit openpyxl
 
 # 4. Run the script
 python analyzer.py
-
-## 🛠️ Tech Stack
-* **Core:** Python 3.10+
-* **Data Processing:** Pandas (ETL)
-* **NLP:** BNLP Toolkit (Bengali Natural Language Processing)
-* **Visualization:** WordCloud, Matplotlib
 
 ## 📊 Sample Output
 ![Sample Word Cloud](Cloud_Sample.png)
