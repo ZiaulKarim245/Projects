@@ -1,6 +1,6 @@
 # 📊 User Feedback Analyzer (English, Bangla & Banglish)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ziaulkarim245/Projects/blob/main/User Feedback Analyzer/WordCloud.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ziaulkarim245/Projects/blob/main/User%20Feedback%20Analyzer/WordCloud.ipynb)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Library](https://img.shields.io/badge/BNLP--Toolkit-green)
 ![License](https://img.shields.io/badge/License-MIT-orange)
