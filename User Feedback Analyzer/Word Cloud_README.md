@@ -39,7 +39,8 @@ To ensure production-grade visualizations, I engineered a Linux-based pipeline o
 * **NLP:** BNLP Toolkit (Bengali Natural Language Processing)
 * **Visualization:** WordCloud, Matplotlib (with Libraqm backend)
 
----
+## 📊 Sample Output
+![Sample Word Cloud](Cloud_Sample.png)
 
 ## 📂 Project Structure
 ```text
@@ -47,6 +48,3 @@ To ensure production-grade visualizations, I engineered a Linux-based pipeline o
 ├── reviews.xlsx         # Dataset (Requires 'Company' and 'Review' columns)
 ├── kalpurush.ttf        # Essential font for Bengali rendering
 └── Cloud_Sample.png     # Sample output for documentation
-
-## 📊 Sample Output
-![Sample Word Cloud](Cloud_Sample.png)
