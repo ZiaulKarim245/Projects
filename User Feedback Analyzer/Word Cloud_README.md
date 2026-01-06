@@ -18,5 +18,4 @@ This tool helps analyze user reviews for EdTech companies in Bangladesh. It hand
 * `kalpurush.ttf`: The Bengali font (downloaded automatically by the script).
 
 ## 📊 Sample Output
-*(Upload an image named 'Cloud_Sample.png' to see it here)*
 ![Sample Word Cloud](Cloud_Sample.png)
