@@ -37,35 +37,7 @@ To ensure production-grade visualizations, I implemented a three-step fix:
 * **NLP:** BNLP Toolkit (Bengali Natural Language Processing)
 * **Visualization:** WordCloud, Matplotlib
 
-## ⚙️ Quick Start
-
-### Option 1: Google Colab (Recommended)
-This is the easiest way to run the project with perfect Bengali rendering.
-1.  Click the **"Open in Colab"** badge at the top of this README.
-2.  Upload your `reviews.xlsx` file to the file section.
-3.  **Run All Cells**. The script will automatically download the required font and libraries.
-
-### Option 2: Local Installation
-If you prefer running it locally (Linux/Mac recommended):
-```bash
-# 1. Clone the repo
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-
-# 2. Install dependencies
-pip install pandas matplotlib wordcloud bnlp_toolkit openpyxl
-
-# 3. Add your data
-# Place your 'reviews.xlsx' file in the folder
-
-# 4. Run the script
-python analyzer.py
 
 ## 📊 Sample Output
 ![Sample Word Cloud](Cloud_Sample.png)
 
-## 📂 Project Structure
-```text
-├── WordCloud.ipynb      # Core analysis script
-├── reviews.xlsx         # Dataset (Requires 'Company' and 'Review' columns)
-├── kalpurush.ttf        # Essential font for Bengali rendering
-└── Cloud_Sample.png     # Sample output for documentation
